@@ -88,6 +88,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libshim_showlogo
 
+# Power
+PRODUCT_PACKAGES += \
+    power.mt6765
+
 # Overlays -- replace official
 PRODUCT_PACKAGES += \
     FrameworkResOverlay
@@ -139,10 +143,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay
 
-# Privapp-permissions whitelist for ImsService
-PRODUCT_COPY_FILES += \
-       $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:system/etc/permissions/privapp-permissions-com.mediatek.ims.xml
+# WiFi
+PRODUCT_PACKAGES += \
+    WifiOverlay
 
+# Privapp-permissions whitelist
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-mediatek.xml:system/etc/permissions/privapp-permissions-mediatek.xml \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.android.launcher3.xml:system/system_ext/etc/permissions/privapp-permissions-com.android.launcher3.xml \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-oppo.xml:system/system_ext/etc/permissions/privapp-permissions-oppo.xml \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:system/etc/permissions/privapp-permissions-com.mediatek.ims.xml 
+	
 # Input/DT2W
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/touchpanel.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/touchpanel.kl \
