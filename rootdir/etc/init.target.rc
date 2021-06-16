@@ -13,6 +13,11 @@ on init
     write /proc/sys/vm/swappiness 100
     write /proc/sys/vm/vfs_cache_pressure 100
 
+   # DT2W
+    chown system input /dev/input/event0
+    chown system input /dev/input/event1
+    chown system input /dev/input/event2
+
 service charger /system/bin/charger
     class charger
     user system
@@ -24,18 +29,8 @@ on boot
 
     # Touchscreen/DT2W
     chown system system /proc/touchpanel/double_tap_enable
-    chmod 0660 /proc/touchpanel/double_tap_enable
+    chown 0660 /proc/touchpanel/double_tap_enable
     write /proc/touchpanel/double_tap_enable 1
-
-    # OTG
-    chown system system /sys/class/power_supply/usb/otg_switch
-    chmod 0660 /sys/class/power_supply/usb/otg_switch
-    write /sys/class/power_supply/usb/otg_switch 1
-
-    # Game mode
-    chown system system /proc/touchpanel/game_switch_enable
-    chmod 0660 /proc/touchpanel/game_switch_enable
-    write /proc/touchpanel/game_switch_enable 1
 
     # Disable edge limit control interface
     write /proc/touchpanel/oppo_tp_limit_enable 0
