@@ -155,7 +155,8 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    WifiOverlay
+    WifiOverlay \
+    wpa_supplicant.conf
 
 # Privapp-permissions whitelist
 PRODUCT_COPY_FILES += \
