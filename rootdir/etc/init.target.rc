@@ -72,6 +72,8 @@ on post-fs-data
 	
 on boot
 
+    stop console
+
     # DT2W
     chown system input /dev/input/event0
     chown system input /dev/input/event1
