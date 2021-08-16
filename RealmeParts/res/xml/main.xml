@@ -145,11 +145,5 @@
             android:title="@string/fps_info_title"
             android:summary="@string/fps_info_summary"
             android:persistent="true" />
-			
-		<CheckBoxPreference
-			android:defaultValue="false"
-			android:key="key_misc_dt2w"
-            android:title="Double tap to wake"
-            android:summary="Unlikely to work for you" />
     </PreferenceCategory>
 </PreferenceScreen>

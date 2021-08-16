@@ -53,7 +53,7 @@
     <string name="tile_game_mode">Game Mode</string>
     <string name="dnd_title">Do Not Disturb</string>
     <string name="dnd_summary">DND will be activated if Game Mode is enabled</string>
-    <string name="game_mode_notif_content">Game Mode is activated</string>
+    <string name="game_mode_notif_content">Gaming Mode is activated</string>
     <!-- Refresh rate -->
     <string name="refresh_title">Screen Refresh Rate</string>
     <string name="tile_refresh_rate">Refresh Rate</string>
