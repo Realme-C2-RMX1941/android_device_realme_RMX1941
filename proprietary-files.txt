@@ -544,6 +544,8 @@ vendor/lib/libstagefrighthw.so
 vendor/lib64/libstagefrighthw.so
 
 # Mediatek
+lib/vendor.mediatek.hardware.videotelephony@1.0.so
+lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 vendor/bin/hw/android.hardware.secure_element@1.0-service-mediatek
 vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek
 vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
